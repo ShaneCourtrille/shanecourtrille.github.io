@@ -1,0 +1,31 @@
+<template>
+  <section>
+    <h2>${heading}</h2>
+
+    <select value.bind="selectedVersion">
+      <option repeat.for="version of versionList" value.bind="version">${version}</option>
+    </select>
+
+    <div class="row">
+    	First Aspect:
+    	<select value.bind="firstAspect">
+    		<option repeat.for="aspect of aspects" value.bind="aspect">${aspect}</option>
+    	</select>
+    </div>
+
+    <div class="row">
+    	Second Aspect:
+    	<select value.bind="secondAspect">
+    		<option repeat.for="aspect of aspects" value.bind="aspect">${aspect}</option>
+    	</select>
+    </div>
+
+    <div class="row">
+    	Length:
+    	<input type="text" value.bind="aspectLength"/>
+
+    <div class="row">
+    	<button click.trigger="calculateAspectLinks()">Calculate</button>
+    </div>
+  </section>
+</template>
